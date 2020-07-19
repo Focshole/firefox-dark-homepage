@@ -1,0 +1,93 @@
+
+
+body, code
+{background: #1c1f24;
+    color: gray;
+}
+@-moz-document url("https://www.facebook.com")
+{
+    background: white !important;
+    color: black !important;
+}
+@-moz-document url("about:home"), url("about:newtab"), url("about:addons"),url("about:config") {
+    .activity-stream {
+        background-color: #1c1f24 !important;
+    }
+    #newtab-search-text {
+    background-color: rgb(47, 52, 63) !important;
+    color: white !important;
+    border: 1px solid !important;
+    border-color: rgba(255,255,255,0.8)!important;
+    }
+    #newtab-search-text:focus, #newtab-search-text:hover {border-color: #5294e2 !important;}
+    
+    .search-wrapper:active input, .search-wrapper input:focus{
+        border-color: #5294e2 !important;
+        box-shadow: #5294e2 !important;
+    }
+    
+    .top-sites-list:not(.dnd-active) .top-site-outer:-moz-any(.active, :focus, :hover) .tile, .card-outer:-moz-any(:hover, :focus, .active):not(.placeholder)
+    {
+        box-shadow:  0 0 20px 0 #5294e2 !important;
+        border-color: #5294e2  !important;
+    }
+    
+    .search-button/*searchbox right arrow*/
+    {
+        filter: brightness(100);
+    }
+    .card, .card-context, .default-icon
+    {
+        background-color: rgba(47, 52, 63, 1) !important;
+        color: white !important;
+    }
+    .card-details
+    {
+        
+        color: white !important;
+    }
+    .card-host-name
+    {
+        color: #9f9f9f !important;
+    }
+    .icon, .icon-settings
+    {
+        filter: invert(1);
+        
+    }
+    .icon.icon-topsites, .icon.icon-highlights, .collapsible-arrow.icon, .icon.icon-history-item, .icon.icon-pin-small
+    {
+        filter: brightness(2.5) !important;
+    }
+    .card-context-icon, .icon-bookmark-added, .context-menu-button
+    {
+        filter: none !important;
+    }
+    
+    .title
+    {
+        color: white !important;  
+    }
+    .section-title, .click-target span
+    {
+        color: white !important;
+    }
+    .active/*on mouse over sections*/
+    {
+        background-color: rgba(47, 52, 63, 1) !important;
+    }
+    .collapsible-section.active .section-top-bar .context-menu-button /*triple dots filling on mouse hover, not working with brightness*/
+    {
+        fill: #6ca4e6 !important; /*was #5294e2*/
+        /*fill: #e2a052 !important;*/
+    }
+}
+
+}
+@-moz-document url("about:blank") {
+    *:empty:not([id]):not([style]) {
+        background-color: rgb(47, 52, 63) !important;
+    }
+} 
+
+
